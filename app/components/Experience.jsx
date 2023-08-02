@@ -1,12 +1,27 @@
-import { useGLTF, Environment, Float, PresentationControls, ContactShadows, Html, Text } from '@react-three/drei'
+import { Environment, Float, PresentationControls, ContactShadows, Text } from '@react-three/drei'
 import Laptop from './Laptop'
+import { motion } from 'framer-motion-3d'
+
+const headContentAnimation = {
+    initial: { scale: 0, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    transition: {
+      type: "spring",
+      damping: 6,
+      stiffness: 30,
+      restDelta: 0.001,
+      duration: 0.6,
+      delay: 1,
+      delayChildren: 0.2,
+    },
+  };
 
 export default function Experience() {
-    const computer = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
+    
     return <>
         <Environment preset='city' />
 
-        <color args={["#6A87A5"]} attach="background" />
+        <color args={["#80002F"]} attach="background" />
 
         <PresentationControls
             global
@@ -33,14 +48,16 @@ export default function Experience() {
 
                 <Laptop />
                 
+                <motion.group {...headContentAnimation}>
                 <Text
                     font='./bangers-v20-latin-regular.woff'
                     fontSize={1}
-                    color={"#E4E1DC"}
-                    position={[2, 0.65, 0.75]}
+                    color={"#FFFFFF"}
+                    position={[1.6, 0.65, 0.75]}
                     rotation-y={-1.5}>
                     SURAJ PAL
                 </Text>
+                </motion.group>
             </Float>
         </PresentationControls>
 
