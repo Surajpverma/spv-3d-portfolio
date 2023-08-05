@@ -24,7 +24,8 @@ export default function Laptop(props) {
   const { nodes, materials } = useGLTF("/model.gltf");
 
   return (
-    <motion.group {...props} dispose={null} {...headContentAnimation} >
+    // <motion.group {...props} dispose={null} {...headContentAnimation} >
+<group {...props} dispose={null} >
       <Html
         transform
         wrapperClass="htmlScreen"
@@ -223,7 +224,7 @@ export default function Laptop(props) {
           />
         </group>
       </group>
-    </motion.group>
+    </group>
   );
 }
 
