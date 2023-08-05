@@ -7,7 +7,7 @@ import { useGLTF, Html } from "@react-three/drei";
 import { motion } from "framer-motion-3d";
 
 const headContentAnimation = {
-  initial: { scale: 1, opacity: 0 },
+  initial: { scale: 0, opacity: 0 },
   animate: { scale: 1, opacity: 1 },
   transition: {
     type: "spring",
@@ -24,8 +24,8 @@ export default function Laptop(props) {
   const { nodes, materials } = useGLTF("/model.gltf");
 
   return (
-    // <motion.group {...props} dispose={null} {...headContentAnimation} >
-<group {...props} dispose={null} >
+    <motion.group {...props} dispose={null} {...headContentAnimation} >
+      
       <Html
         transform
         wrapperClass="htmlScreen"
@@ -224,7 +224,7 @@ export default function Laptop(props) {
           />
         </group>
       </group>
-    </group>
+    </motion.group>
   );
 }
 
