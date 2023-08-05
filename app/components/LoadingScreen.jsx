@@ -3,8 +3,7 @@
 import { useProgress } from "@react-three/drei";
 import { useEffect } from "react";
 
-export const LoadingScreen = (props) => {
-  const { started, setStarted } = props;
+export const LoadingScreen = ({ started, setStarted }) => {
   const { progress, total, loaded, item } = useProgress();
 
   useEffect(() => {
