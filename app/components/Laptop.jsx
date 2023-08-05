@@ -12,9 +12,9 @@ const headContentAnimation = {
   transition: {
     type: "spring",
     damping: 6,
-    stiffness: 30,
+    stiffness: 50,
     restDelta: 0.001,
-    duration: 0.6,
+    duration: 0.5,
     delay: 1,
     delayChildren: 0.2,
   },
