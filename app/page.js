@@ -10,7 +10,7 @@ export default function Home() {
   const [started, setStarted] = useState(false);
 
   return (
-    <main className="w-full h-full fixed top-0 left-0">
+    <main className="w-full h-full fixed top-0 left-0 bg-[#80002F]">
 
         {started && <CanvasThree />}
 

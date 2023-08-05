@@ -22,6 +22,7 @@ const headContentAnimation = {
 
 export default function Laptop(props) {
   const { nodes, materials } = useGLTF("/model.gltf");
+
   return (
     <motion.group {...props} dispose={null} {...headContentAnimation} >
       <Html

@@ -17,8 +17,10 @@ const headContentAnimation = {
   };
 
 export default function Experience() {
+
+    const isMobile = window.innerWidth < 768;
     
-    return <>
+    return <group rotation-z={ isMobile ? Math.PI / 2 : 0 } rotation-x={ isMobile ? -Math.PI / 6 : 0 } rotation-y={ isMobile ? -Math.PI / 9 : 0 } scale={ isMobile ? 0.65 : 1 } >
         <Environment preset='city' />
 
         <color args={["#80002F"]} attach="background" />
@@ -54,7 +56,9 @@ export default function Experience() {
                     fontSize={1}
                     color={"#FFFFFF"}
                     position={[1.6, 0.65, 0.75]}
-                    rotation-y={-1.5}>
+                    rotation-y={-1.5}
+                    // rotation-x={ isMobile ? Math.PI / 2 : 0 }
+                    >
                     SURAJ PAL
                 </Text>
                 </motion.group>
@@ -67,5 +71,5 @@ export default function Experience() {
             blur={2.4}
             scale={5}
         />
-    </>
+    </group>
 }

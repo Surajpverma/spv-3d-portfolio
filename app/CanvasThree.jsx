@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import Experience from "./components/Experience";
 
 const CanvasThree = () => {
+  const isMobile = window.innerWidth < 768;
   return (
     <Canvas
       camera={{
