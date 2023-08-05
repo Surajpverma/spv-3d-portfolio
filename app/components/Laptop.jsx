@@ -7,7 +7,7 @@ import { useGLTF, Html } from "@react-three/drei";
 import { motion } from "framer-motion-3d";
 
 const headContentAnimation = {
-  initial: { scale: 0, opacity: 0 },
+  initial: { scale: 1, opacity: 0 },
   animate: { scale: 1, opacity: 1 },
   transition: {
     type: "spring",
