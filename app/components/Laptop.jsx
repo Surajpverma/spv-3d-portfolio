@@ -24,13 +24,12 @@ export default function Laptop(props) {
   const { nodes, materials } = useGLTF("/model.gltf");
 
   return (
-    <motion.group {...props} dispose={null} {...headContentAnimation} >
-      
+    <motion.group {...props} dispose={null} {...headContentAnimation}>
       <Html
         transform
         wrapperClass="htmlScreen"
         distanceFactor={1}
-        position={[ 0, 0.23, -1.4]}
+        position={[0, 0.23, -1.4]}
         rotation-x={-0.256}
       >
         <iframe src="https://spv-comic.vercel.app/" />
